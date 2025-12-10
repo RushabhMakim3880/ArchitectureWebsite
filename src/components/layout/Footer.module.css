@@ -1,0 +1,59 @@
+.footer {
+    background-color: #111;
+    color: #fff;
+    padding: 4rem var(--spacing-gutter);
+    margin-top: auto;
+}
+
+.container {
+    max-width: var(--spacing-container);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4rem;
+}
+
+.column h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.linkList {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.linkList a {
+    color: #999;
+    transition: color 0.2s;
+    font-size: 0.95rem;
+}
+
+.linkList a:hover {
+    color: #fff;
+}
+
+.address {
+    color: #999;
+    line-height: 1.6;
+    font-style: normal;
+}
+
+.bottom {
+    border-top: 1px solid #333;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    text-align: center;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}

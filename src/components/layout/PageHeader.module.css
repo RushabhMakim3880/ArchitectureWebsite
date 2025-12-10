@@ -1,0 +1,29 @@
+.header {
+    padding: 120px 2rem 4rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.breadcrumb {
+    font-size: 0.9rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.breadcrumb a {
+    color: #999;
+    transition: color 0.2s;
+}
+
+.breadcrumb a:hover {
+    color: #000;
+}

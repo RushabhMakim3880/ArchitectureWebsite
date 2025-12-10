@@ -1,0 +1,132 @@
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.slideContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.slideImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+    /* Darkened for text readability */
+}
+
+/* New 3D Layer */
+.sceneContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    /* Above image, below text */
+    pointer-events: all;
+    /* Allow interaction with 3D model */
+}
+
+.overlay {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    z-index: 3;
+    color: white;
+    pointer-events: none;
+    /* Let clicks pass to 3D model if needed currently text blocks it */
+}
+
+.content {
+    max-width: 600px;
+}
+
+.projectTitle {
+    font-size: 4rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.projectLocation {
+    font-size: 1.2rem;
+    font-weight: 300;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.arrowBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 4;
+    transition: all 0.3s ease;
+}
+
+.arrowBtn:hover {
+    background: white;
+    color: black;
+}
+
+.prevBtn {
+    left: 2rem;
+}
+
+.nextBtn {
+    right: 2rem;
+}
+
+.controls {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    display: flex;
+    gap: 1rem;
+    z-index: 4;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dotActive {
+    background: white;
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .projectTitle {
+        font-size: 2.5rem;
+    }
+
+    .arrowBtn {
+        width: 40px;
+        height: 40px;
+    }
+}
